@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import android.widget.TextView
+import android.content.Intent
 
 data class Joke(
     val category: String, val question: String, val answer: String
@@ -30,6 +31,16 @@ class JokeAdapter(private val jokes: MutableList<Joke>) :
         holder.categoryTextView.text = joke.category
         holder.questionTextView.text = joke.question
         holder.answerTextView.text = joke.answer
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, JokeDetailActivity::class.java).apply {
+                putExtra("CATEGORY", joke.category)
+                putExtra("QUESTION", joke.question)
+                putExtra("ANSWER", joke.answer)
+            }
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = jokes.size
@@ -42,6 +53,8 @@ class JokeAdapter(private val jokes: MutableList<Joke>) :
         jokes.addAll(newJokes)
         diffResult.dispatchUpdatesTo(this)
     }
+
+
 }
 
 class JokeDiffCallback(
