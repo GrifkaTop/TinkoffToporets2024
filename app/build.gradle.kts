@@ -7,6 +7,11 @@ android {
     namespace = "com.example.toporetstinkoff24"
     compileSdk = 34
 
+
+    buildFeatures {
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.toporetstinkoff24"
         minSdk = 24
@@ -21,8 +26,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
