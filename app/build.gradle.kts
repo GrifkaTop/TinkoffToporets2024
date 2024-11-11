@@ -4,13 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.toporetstinkoff24"
-    compileSdk = 34
+
+    namespace = "com.example.toporetstinkoff24v4"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.toporetstinkoff24"
+        applicationId = "com.example.toporetstinkoff24v4"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,6 +38,7 @@ android {
 
 dependencies {
 
+     //implementation (libs.androidx.appcompat.v131)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
