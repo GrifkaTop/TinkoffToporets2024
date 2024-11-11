@@ -1,54 +1,40 @@
-package com.example.toporetstinkoff24
+object JokeRepository {
+    private var idCounter = 1
 
-interface JokeRepository {
-    fun getJokes(): List<Joke>
-}
-
-class JokeRepositoryImpl : JokeRepository {
-    override fun getJokes(): List<Joke> {
+    fun getJokes(): List<Joke> {
         return listOf(
             Joke(
-                1,
-                "Тест",
-                "??????????????????????????????",
-                "БАБАББАБАБАББАБАББАБАБАБАБАБУБАУБАБУБАУБАУБАБУАБУБАУБАУБАБУБАУББУАБУБАБАУБУАБАБАУБУАБАУБУАБУАБАУБУБАУБУАБУБУАБАУБУАБАУБУАБУА"
-            ),
-            Joke(2, "Наука", "Почему ученые не доверяют атомам?", "Потому что они все составляют."),
-            Joke(3, "Математика", "Почему 6 боится 7?", "Потому что 7 8 (съел) 9."),
-            Joke(4, "Животные", "Почему коты не любят компьютеры?", "Потому что они боятся мышей."),
-            Joke(
-                5,
-                "Спорт",
-                "Почему футболисты не могут играть в прятки?",
-                "Потому что они всегда попадают в офсайд."
+                idCounter++,
+                "Christmas",
+                "What does Santa suffer from if he gets stuck in a chimney?",
+                "Claustrophobia!"
             ),
             Joke(
-                6,
-                "Еда",
-                "Почему ананас никогда не выигрывает в покер?",
-                "Потому что он всегда показывает свои колоды."
+                idCounter++,
+                "Science",
+                "Why can't you trust an atom?",
+                "Because they make up everything!"
             ),
             Joke(
-                7,
-                "Отношения",
-                "Почему отношения как код?",
-                "Если не компилируются, надо искать баги."
+                idCounter++,
+                "Math",
+                "Why was the equal sign so humble?",
+                "Because it knew it wasn't less than or greater than anyone else!"
             ),
             Joke(
-                8,
-                "Путешествия",
-                "Что говорит один чемодан другому?",
-                "Давай, у нас много мест, куда поехать!"
+                idCounter++,
+                "Programming",
+                "Why do programmers prefer dark mode?",
+                "Because light attracts bugs!"
             ),
+            Joke(idCounter++, "Animals", "What do you call a bear with no teeth?", "A gummy bear!"),
             Joke(
-                9, "История", "Почему история всегда скучна?", "Потому что она никогда не меняется!"
+                idCounter++,
+                "Food",
+                "Why did the tomato turn red?",
+                "Because it saw the salad dressing!"
             ),
-            Joke(
-                10,
-                "Музыка",
-                "Почему музыканты всегда берут с собой лестницу?",
-                "Чтобы достать высокие ноты!"
-            )
+            Joke(idCounter++, "Music", "What kind of music do mummies listen to?", "Wrap music!")
         )
     }
 }

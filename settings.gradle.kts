@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ToporetsTinkoff24"
+rootProject.name = "ToporetsTinkoff24v4"
 include(":app")

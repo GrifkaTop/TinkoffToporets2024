@@ -1,62 +1,33 @@
-package com.example.toporetstinkoff24
-
-import android.content.Intent
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.toporetstinkoff24.databinding.JokeItemBinding
+import com.example.toporetstinkoff24v4.R
 
-class JokeAdapter(private var jokes: MutableList<Joke>) :
+class JokeAdapter(private val jokes: List<Joke>, private val onClick: (Joke) -> Unit) :
     RecyclerView.Adapter<JokeAdapter.JokeViewHolder>() {
 
-    class JokeViewHolder(private val binding: JokeItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(joke: Joke) {
-            binding.jokeCategory.text = joke.category
-            binding.jokeQuestion.text = joke.question
-            binding.jokeAnswer.text = joke.answer
+    inner class JokeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val questionTextView: TextView = itemView.findViewById(R.id.questionTextView)
 
-            itemView.setOnClickListener {
-                val context = itemView.context
-                val intent = Intent(context, JokeDetailActivity::class.java).apply {
-                    putExtra("CATEGORY", joke.category)
-                    putExtra("QUESTION", joke.question)
-                    putExtra("ANSWER", joke.answer)
-                }
-                context.startActivity(intent)
-            }
+        @SuppressLint("SetTextI18n")
+        fun bind(joke: Joke) {
+            questionTextView.text =
+                joke.question.take(50) + if (joke.question.length > 50) "..." else ""
+            itemView.setOnClickListener { onClick(joke) }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokeViewHolder {
-        val binding = JokeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return JokeViewHolder(binding)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_joke, parent, false)
+        return JokeViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: JokeViewHolder, position: Int) {
         holder.bind(jokes[position])
     }
 
-    override fun getItemCount() = jokes.size
-
-    fun updateJokes(newJokes: List<Joke>) {
-        jokes.clear()
-        jokes.addAll(newJokes)
-        notifyDataSetChanged()
-    }
-}
-
-class JokeDiffCallback(
-    private val oldList: List<Joke>, private val newList: List<Joke>
-) : DiffUtil.Callback() {
-    override fun getOldListSize(): Int = oldList.size
-    override fun getNewListSize(): Int = newList.size
-    override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition].id == newList[newItemPosition].id
-    }
-
-    override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
-        return oldList[oldItemPosition] == newList[newItemPosition]
-    }
+    override fun getItemCount(): Int = jokes.size
 }

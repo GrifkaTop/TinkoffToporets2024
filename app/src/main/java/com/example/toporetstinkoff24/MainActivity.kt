@@ -1,31 +1,18 @@
-package com.example.toporetstinkoff24
-
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.toporetstinkoff24.databinding.ActivityMainBinding
+import android.widget.FrameLayout
+import com.example.toporetstinkoff24v4.R
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var jokeAdapter: JokeAdapter
-    private val jokeViewModel: JokeViewModel by viewModels()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        jokeAdapter = JokeAdapter(mutableListOf())
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = jokeAdapter
-
-        jokeViewModel.jokes.observe(this) { jokes ->
-            jokeAdapter.updateJokes(jokes)
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, JokeListFragment())
+                .commit()
         }
-
-        jokeViewModel.loadJokes()
     }
 }
