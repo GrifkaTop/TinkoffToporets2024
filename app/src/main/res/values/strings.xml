@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ToporetsTinkoff24</string>
+    <string name="app_name">Шутки</string>
+    <string name="todo">TODO</string>
+    <string name="back">Back</string>
 </resources>

@@ -6,4 +6,13 @@
     <item name="backButton" type="id" />
     <item name="fragment_container" type="id" />
     <item name="recyclerView" type="id" />
+    <item name="categoryTextView" type="id" />
+    <item name="answerTextView" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="fab_add" type="id" />
+    <item name="button_add" type="id" />
+    <item name="text_view_category" type="id" />
+    <item name="text_view_question" type="id" />
+    <item name="text_view_answer" type="id" />
+    <item name="button_back" type="id" />
 </resources>
