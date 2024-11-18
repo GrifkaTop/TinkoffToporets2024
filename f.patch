@@ -1,0 +1,1013 @@
+Subject: [PATCH] f
+---
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/.idea/misc.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,4 +1,3 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+Index: .idea/runConfigurations/app.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/app.xml b/.idea/runConfigurations/app.xml
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/.idea/runConfigurations/app.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,68 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App">
++    <module name="ToporetsTinkoff24.app.main" />
++    <option name="DEPLOY" value="true" />
++    <option name="DEPLOY_APK_FROM_BUNDLE" value="true" />
++    <option name="DEPLOY_AS_INSTANT" value="false" />
++    <option name="ARTIFACT_NAME" value="" />
++    <option name="PM_INSTALL_OPTIONS" value="" />
++    <option name="ALL_USERS" value="false" />
++    <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
++    <option name="CLEAR_APP_STORAGE" value="false" />
++    <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
++    <option name="ACTIVITY_EXTRA_FLAGS" value="" />
++    <option name="MODE" value="default_activity" />
++    <option name="CLEAR_LOGCAT" value="false" />
++    <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
++    <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
++    <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
++    <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
++    <option name="DEBUGGER_TYPE" value="Auto" />
++    <Auto>
++      <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++      <option name="SHOW_STATIC_VARS" value="true" />
++      <option name="WORKING_DIR" value="" />
++      <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++      <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++      <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++      <option name="DEBUG_SANDBOX_SDK" value="false" />
++    </Auto>
++    <Hybrid>
++      <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++      <option name="SHOW_STATIC_VARS" value="true" />
++      <option name="WORKING_DIR" value="" />
++      <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++      <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++      <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++      <option name="DEBUG_SANDBOX_SDK" value="false" />
++    </Hybrid>
++    <Java>
++      <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++      <option name="DEBUG_SANDBOX_SDK" value="false" />
++    </Java>
++    <Native>
++      <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
++      <option name="SHOW_STATIC_VARS" value="true" />
++      <option name="WORKING_DIR" value="" />
++      <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
++      <option name="SHOW_OPTIMIZED_WARNING" value="true" />
++      <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
++      <option name="DEBUG_SANDBOX_SDK" value="false" />
++    </Native>
++    <Profilers>
++      <option name="ADVANCED_PROFILING_ENABLED" value="false" />
++      <option name="STARTUP_PROFILING_ENABLED" value="false" />
++      <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
++      <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
++      <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
++      <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
++    </Profilers>
++    <option name="DEEP_LINK" value="" />
++    <option name="ACTIVITY_CLASS" value="" />
++    <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
++    <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
++    <method v="2">
++      <option name="Android.Gradle.BeforeRunTask" enabled="true" />
++    </method>
++  </configuration>
++</component>
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/AndroidManifest.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,21 +1,32 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:tools="http://schemas.android.com/tools">
++    xmlns:tools="http://schemas.android.com/tools"
++    package="com.example.toporetstinkoff24">
+ 
++    <uses-permission android:name="android.permission.INTERNET" />
+     <application
+         android:allowBackup="true"
+-        android:dataExtractionRules="@xml/data_extraction_rules"
+-        android:fullBackupContent="@xml/backup_rules"
+         android:icon="@mipmap/ic_launcher"
+         android:label="@string/app_name"
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+-        android:theme="@style/Theme.ToporetsTinkoff24"
+-        tools:targetApi="31">
+-        <activity
+-            android:name=".MainActivity"
++        android:theme="@style/Theme.ToporetsTinkoff24">
++
++        <!--below is the code for default activity which is Main Activity-->
++        <activity android:name=".MainActivity"
+             android:exported="true">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++
++                <category android:name="android.intent.category.LAUNCHER" />
++            </intent-filter>
++
++            <!--Inside this activity you should be having below code for  
++                intent filter which will check the default activity-->
+         </activity>
++        <activity android:name=".JokeListActivity" />
++        <activity android:name=".AddJokeActivity" />
++        <activity android:name=".JokeDetailActivity"/>
+     </application>
+ 
+-</manifest>
+\ No newline at end of file
++</manifest>
+Index: app/src/main/java/com/example/toporetstinkoff24/AddJokeActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/AddJokeActivity.kt b/app/src/main/java/com/example/toporetstinkoff24/AddJokeActivity.kt
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/java/com/example/toporetstinkoff24/AddJokeActivity.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,43 @@
++package com.example.toporetstinkoff24
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.widget.Button
++import android.widget.EditText
++import android.widget.Toast
++import androidx.appcompat.app.AppCompatActivity
++import java.util.UUID
++
++class AddJokeActivity : AppCompatActivity() {
++
++    private lateinit var editTextCategory: EditText
++    private lateinit var editTextQuestion: EditText
++    private lateinit var editTextAnswer: EditText
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_add_joke)
++
++        findViewById<Button>(R.id.button_add).setOnClickListener {
++            addJoke()
++        }
++    }
++
++    private fun addJoke() {
++        val category = editTextCategory.text.toString()
++        val question = editTextQuestion.text.toString()
++        val answer = editTextAnswer.text.toString()
++
++        if (category.isEmpty() || question.isEmpty() || answer.isEmpty()) {
++            Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
++            return
++        }
++
++        val id = UUID.randomUUID().toString()
++        val newJoke = Joke(id, category, question, answer)
++        (application as MyApp).addJoke(newJoke)
++
++        finish()
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/Joke.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/Joke.kt b/app/src/main/java/com/example/toporetstinkoff24/Joke.kt
+--- a/app/src/main/java/com/example/toporetstinkoff24/Joke.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/java/com/example/toporetstinkoff24/Joke.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,21 +1,8 @@
+ package com.example.toporetstinkoff24
+ 
+-import android.annotation.SuppressLint
+-import android.os.Parcel
+-import android.os.Parcelable
+-
+-@SuppressLint("ParcelCreator")
+ data class Joke(
+-    val id: Int,
++    val id: String,
+     val category: String,
+     val question: String,
+     val answer: String
+-) : Parcelable {
+-    override fun describeContents(): Int {
+-        TODO("Not yet implemented")
+-    }
+-
+-    override fun writeToParcel(dest: Parcel, flags: Int) {
+-        TODO("Not yet implemented")
+-    }
+-}
+\ No newline at end of file
++)
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeAdapter.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeAdapter.kt
+--- a/app/src/main/java/com/example/toporetstinkoff24/JokeAdapter.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/java/com/example/toporetstinkoff24/JokeAdapter.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,5 +1,6 @@
+ package com.example.toporetstinkoff24
+ 
++import JokeViewHolder
+ import android.annotation.SuppressLint
+ import android.view.LayoutInflater
+ import android.view.View
+@@ -8,27 +9,15 @@
+ import androidx.recyclerview.widget.RecyclerView
+ import com.example.toporetstinkoff24.R
+ 
+-class JokeAdapter(private val jokes: List<Joke>, private val onClick: (Joke) -> Unit) :
+-    RecyclerView.Adapter<JokeAdapter.JokeViewHolder>() {
+-
+-    inner class JokeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+-        private val questionTextView: TextView = itemView.findViewById(R.id.questionTextView)
+-
+-        @SuppressLint("SetTextI18n")
+-        fun bind(joke: Joke) {
+-            questionTextView.text =
+-                joke.question.take(50) + if (joke.question.length > 50) "..." else ""
+-            itemView.setOnClickListener { onClick(joke) }
+-        }
+-    }
++class JokeAdapter(private val jokes: List<Joke>, private val clickListener: (Joke) -> Unit) : RecyclerView.Adapter<JokeViewHolder>() {
+ 
+     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokeViewHolder {
+-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_joke, parent, false)
+-        return JokeViewHolder(view)
++        val inflater = LayoutInflater.from(parent.context)
++        return JokeViewHolder(inflater.inflate(R.layout.item_joke, parent, false))
+     }
+ 
+     override fun onBindViewHolder(holder: JokeViewHolder, position: Int) {
+-        holder.bind(jokes[position])
++        holder.bind(jokes[position], clickListener)
+     }
+ 
+     override fun getItemCount(): Int = jokes.size
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeDetailActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeDetailActivity.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeDetailActivity.kt
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/java/com/example/toporetstinkoff24/JokeDetailActivity.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,53 @@
++package com.example.toporetstinkoff24
++
++import android.annotation.SuppressLint
++import android.os.Bundle
++import android.util.Log
++import android.widget.Button
++import android.widget.TextView
++import androidx.appcompat.app.AppCompatActivity
++import kotlinx.coroutines.CoroutineScope
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.launch
++import kotlinx.coroutines.withContext
++
++class JokeDetailActivity : AppCompatActivity() {
++
++    private lateinit var textViewCategory: TextView
++    private lateinit var textViewQuestion: TextView
++    private lateinit var textViewAnswer: TextView
++
++    var =
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.fragment_joke_detail)
++
++        textViewCategory = findViewById(R.id.text_view_category)
++        textViewQuestion = findViewById(R.id.text_view_question)
++        textViewAnswer = findViewById(R.id.text_view_answer)
++
++
++        val jokeId = intent.getStringExtra("joke_id") ?: return
++
++        findViewById<Button>(R.id.button_back).setOnClickListener { finish() }
++
++        loadJokeDetails(jokeId)
++    }
++
++    private fun loadJokeDetails(jokeId: String) {
++        CoroutineScope(Dispatchers.IO).launch {
++            val joke = { myApp: MyApp, jokeId: String -> myApp.getJoke(jokeId) }
++            withContext(Dispatchers.Main) {
++                if (joke != null) {
++                    textViewCategory.text = joke.category
++                    textViewQuestion.text = joke.question
++                    textViewAnswer.text = joke.answer
++                } else {
++                    Log.e("JokeDetailActivity", "Joke not found for ID: $jokeId")
++                }
++            }
++        }
++    }
++}
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeListActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeListActivity.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeListActivity.kt
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/java/com/example/toporetstinkoff24/JokeListActivity.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,54 @@
++package com.example.toporetstinkoff24
++
++import android.annotation.SuppressLint
++import android.content.Intent
++import android.os.Bundle
++import android.widget.Toast
++import androidx.appcompat.app.AppCompatActivity
++import androidx.recyclerview.widget.LinearLayoutManager
++import androidx.recyclerview.widget.RecyclerView
++import com.google.android.material.floatingactionbutton.FloatingActionButton
++import kotlinx.coroutines.CoroutineScope
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.launch
++import kotlinx.coroutines.withContext
++
++class JokeListActivity : AppCompatActivity() {
++
++    private lateinit var recyclerView: RecyclerView
++    private lateinit var jokeAdapter: JokeAdapter
++    //private lateinit var databaseHelper: delete   DatabaseHelper
++
++    private val jokes = ArrayList<Joke>()
++
++    @SuppressLint("MissingInflatedId")
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++        setContentView(R.layout.activity_joke_list)
++
++        recyclerView = findViewById(R.id.recycler_view)
++        jokeAdapter = JokeAdapter(jokes) { joke ->
++            val intent = Intent(this, JokeDetailActivity::class.java).apply {
++                putExtra("joke_id", joke.id)
++            }
++            startActivity(intent)
++        }
++
++        recyclerView.layoutManager = LinearLayoutManager(this)
++        recyclerView.adapter = jokeAdapter
++
++        findViewById<FloatingActionButton>(R.id.fab_add).setOnClickListener {
++            startActivity(Intent(this, AddJokeActivity::class.java))
++        }
++
++        loadTestJokes()
++    }
++
++    @SuppressLint("NotifyDataSetChanged")
++    private fun loadTestJokes() {
++        jokes.add(Joke("1", "Общие", "Почему курица перешла дорогу?", "Чтобы попасть на другую сторону!"))
++        jokes.add(Joke("2", "Общие", "Какой день недели самый короткий?", "Суббота!"))
++
++        jokeAdapter.notifyDataSetChanged()
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeViewHolder.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeViewHolder.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeViewHolder.kt
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/java/com/example/toporetstinkoff24/JokeViewHolder.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,22 @@
++import android.view.View
++import android.widget.TextView
++import androidx.recyclerview.widget.RecyclerView
++import com.example.toporetstinkoff24.Joke
++import com.example.toporetstinkoff24.R
++
++class JokeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
++
++    private val categoryTextView: TextView = itemView.findViewById(R.id.categoryTextView)
++    private val questionTextView: TextView = itemView.findViewById(R.id.questionTextView)
++    private val answerTextView: TextView = itemView.findViewById(R.id.answerTextView)
++
++    fun bind(joke: Joke, clickListener: (Joke) -> Unit) {
++        categoryTextView.text = joke.category
++        questionTextView.text = joke.question
++
++        // Ограничиваем длину ответа до 50 символов с добавлением "..."
++        answerTextView.text = if (joke.answer.length > 50) "${joke.answer.take(50)}..." else joke.answer
++
++        itemView.setOnClickListener { clickListener(joke) }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/MainActivity.kt b/app/src/main/java/com/example/toporetstinkoff24/MainActivity.kt
+--- a/app/src/main/java/com/example/toporetstinkoff24/MainActivity.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/java/com/example/toporetstinkoff24/MainActivity.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -6,16 +6,17 @@
+ import androidx.core.view.ViewCompat
+ import androidx.core.view.WindowInsetsCompat
+ 
++import android.content.Intent
++
++
+ class MainActivity : AppCompatActivity() {
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_main)
+ 
+-        if (savedInstanceState == null) {
+-            supportFragmentManager.beginTransaction()
+-                .replace(R.id.fragment_container, JokeListFragment())
+-                .commit()
+-        }
++        startActivity(Intent(this, JokeListActivity::class.java))
++
++        finish()
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/MyApp.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/MyApp.kt b/app/src/main/java/com/example/toporetstinkoff24/MyApp.kt
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/java/com/example/toporetstinkoff24/MyApp.kt	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,22 @@
++package com.example.toporetstinkoff24
++
++import android.app.Application
++import androidx.lifecycle.MutableLiveData
++
++class MyApp : Application() {
++
++    private val _jokesList = MutableLiveData<List<Joke>>(emptyList())
++    private val jokesList = ArrayList<Joke>()
++
++    fun addJoke(joke: Joke) {
++        jokesList.add(joke)
++    }
++
++    fun getJokes(): List<Joke> {
++        return jokesList
++    }
++
++    fun getJoke(jokeId: String): Joke? {
++        return _jokesList.value?.find { it.id == jokeId }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_add_joke.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_add_joke.xml b/app/src/main/res/layout/activity_add_joke.xml
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/res/layout/activity_add_joke.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,32 @@
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <EditText
++        android:id="@+id/edit_text_category"
++        android:hint="Категория"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"/>
++
++    <EditText
++        android:id="@+id/edit_text_question"
++        android:hint="Вопрос"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"/>
++
++    <EditText
++        android:id="@+id/edit_text_answer"
++        android:hint="Ответ"
++        android:maxLines="5"
++        android:minLines="3"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"/>
++
++    <Button
++        android:id="@+id/button_add"
++        android:text="Добавить шутку"
++        android:onClick="addJoke"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"/>
++</LinearLayout>
+Index: app/src/main/res/layout/activity_joke_list.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_joke_list.xml b/app/src/main/res/layout/activity_joke_list.xml
+new file mode 100644
+--- /dev/null	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
++++ b/app/src/main/res/layout/activity_joke_list.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -0,0 +1,20 @@
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/recycler_view"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"/>
++
++    <com.google.android.material.floatingactionbutton.FloatingActionButton
++        android:id="@+id/fab_add"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:contentDescription="@string/todo"
++        android:text="+"
++        android:layout_alignParentEnd="true"
++        android:layout_alignParentBottom="true"
++        tools:ignore="HardcodedText" />
++</RelativeLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_joke_detail.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_joke_detail.xml b/app/src/main/res/layout/fragment_joke_detail.xml
+--- a/app/src/main/res/layout/fragment_joke_detail.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/res/layout/fragment_joke_detail.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,23 +1,38 @@
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:padding="16dp">
+ 
+     <TextView
+-        android:id="@+id/jokeQuestionTextView"
+-        android:textSize="20sp" android:layout_height="16dp"
+-        android:layout_width="16dp"/>
++        android:id="@+id/text_view_category"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Category"
++        android:textSize="18sp"
++        android:padding="8dp"/>
++
++    <TextView
++        android:id="@+id/text_view_question"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Question?"
++        android:textSize="16sp"
++        android:padding="8dp"/>
+ 
+     <TextView
+-        android:id="@+id/jokeAnswerTextView"
+-        android:textSize="18sp"
+-        android:layout_marginTop="8dp" android:layout_height="16dp"
+-        android:layout_width="16dp"/>
++        android:id="@+id/text_view_answer"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="Answer"
++        android:textSize="16sp"
++        android:padding="8dp"/>
+ 
+     <Button
+         android:id="@+id/backButton"
++        android:layout_width="16dp"
++        android:layout_height="16dp"
+         android:text="Назад"
+-        android:layout_marginTop="16dp" android:layout_height="16dp"
+-        android:layout_width="16dp"/>
++        tools:ignore="HardcodedText" />
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/item_joke.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/item_joke.xml b/app/src/main/res/layout/item_joke.xml
+--- a/app/src/main/res/layout/item_joke.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/res/layout/item_joke.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,11 +1,35 @@
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:background="?android:attr/selectableItemBackground"
+     android:orientation="vertical"
+-    android:padding="16dp">
++    android:padding="16dp"
++    tools:ignore="ExtraText">
++
++    <TextView
++        android:id="@+id/categoryTextView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:textColor="@android:color/holo_blue_dark"
++        android:textSize="16sp"
++        android:textStyle="bold" />
+ 
+     <TextView
+         android:id="@+id/questionTextView"
+-        android:textSize="16sp" android:layout_height="16dp"
+-        android:layout_width="16dp"/>
+-</LinearLayout>
+\ No newline at end of file
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="4dp"
++        android:textColor="@android:color/black"
++        android:textSize="14sp" />
++
++    <TextView
++        android:id="@+id/answerTextView"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="2dp"
++        android:textColor="@android:color/darker_gray"
++        android:textSize="12sp" />
++
++</LinearLayout>
+Index: app/src/main/res/values/ids.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/ids.xml b/app/src/main/res/values/ids.xml
+--- a/app/src/main/res/values/ids.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/res/values/ids.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -6,4 +6,13 @@
+     <item name="backButton" type="id" />
+     <item name="fragment_container" type="id" />
+     <item name="recyclerView" type="id" />
++    <item name="categoryTextView" type="id" />
++    <item name="answerTextView" type="id" />
++    <item name="recycler_view" type="id" />
++    <item name="fab_add" type="id" />
++    <item name="button_add" type="id" />
++    <item name="text_view_category" type="id" />
++    <item name="text_view_question" type="id" />
++    <item name="text_view_answer" type="id" />
++    <item name="button_back" type="id" />
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/app/src/main/res/values/strings.xml	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,3 +1,5 @@
+ <resources>
+-    <string name="app_name">ToporetsTinkoff24</string>
++    <string name="app_name">Шутки</string>
++    <string name="todo">TODO</string>
++    <string name="back">Back</string>
+ </resources>
+\ No newline at end of file
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+--- a/build.gradle.kts	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ b/build.gradle.kts	(revision 17bd753729b2dc51dd248692e2e6d7344a755436)
+@@ -1,4 +1,3 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ plugins {
+     alias(libs.plugins.android.application) apply false
+     alias(libs.plugins.jetbrains.kotlin.android) apply false
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeDetailFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeDetailFragment.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeDetailFragment.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/toporetstinkoff24/JokeDetailFragment.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,43 +0,0 @@
+-package com.example.toporetstinkoff24
+-
+-import android.os.Bundle
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import android.widget.Button
+-import androidx.fragment.app.Fragment
+-import android.widget.TextView
+-import com.example.toporetstinkoff24.R
+-
+-class JokeDetailFragment : Fragment() {
+-
+-    private lateinit var joke: Joke
+-
+-    companion object {
+-        private const val ARG_JOKE = "joke"
+-
+-        fun newInstance(joke: Joke): JokeDetailFragment {
+-            val fragment = JokeDetailFragment()
+-            val args = Bundle()
+-            args.putParcelable(ARG_JOKE, joke)
+-            fragment.arguments = args
+-            return fragment
+-        }
+-    }
+-
+-
+-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+-        return inflater.inflate(R.layout.fragment_joke_detail, container, false)
+-    }
+-
+-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+-        super.onViewCreated(view, savedInstanceState)
+-
+-        view.findViewById<TextView>(R.id.jokeQuestionTextView).text = joke.question
+-        view.findViewById<TextView>(R.id.jokeAnswerTextView).text = joke.answer
+-
+-        view.findViewById<Button>(R.id.backButton).setOnClickListener {
+-            requireActivity().supportFragmentManager.popBackStack()
+-        }
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeListAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeListAdapter.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeListAdapter.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/toporetstinkoff24/JokeListAdapter.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,45 +0,0 @@
+-package com.example.toporetstinkoff24
+-
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import android.widget.TextView
+-import androidx.recyclerview.widget.RecyclerView
+-
+-class JokesListAdapter(private val jokes: List<Joke>, private val onClick: (Joke) -> Unit) :
+-    RecyclerView.Adapter<JokesListAdapter.JokeViewHolder>() {
+-
+-    inner class JokeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+-        private val categoryTextView: TextView = TextView(view.context)
+-        private val questionTextView: TextView = TextView(view.context)
+-
+-        init {
+-            val layoutParams = ViewGroup.LayoutParams(
+-                ViewGroup.LayoutParams.MATCH_PARENT,
+-                ViewGroup.LayoutParams.WRAP_CONTENT
+-            )
+-            categoryTextView.layoutParams = layoutParams
+-            questionTextView.layoutParams = layoutParams
+-
+-            (view as ViewGroup).addView(categoryTextView)
+-
+-            itemView.setOnClickListener { onClick(jokes[adapterPosition]) }
+-        }
+-
+-        fun bind(joke: Joke) {
+-            questionTextView.text = joke.question.truncate(50)
+-            itemView.setOnClickListener { onClick(joke) }
+-        }
+-    }
+-
+-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JokeViewHolder {
+-        val view = LayoutInflater.from(parent.context).inflate(R.layout.simple_list_item, parent, false)
+-        return JokeViewHolder(view as ViewGroup)
+-    }
+-
+-    override fun onBindViewHolder(holder: JokeViewHolder, position: Int) {
+-        holder.bind(jokes[position])
+-    }
+-
+-    override fun getItemCount(): Int = jokes.size
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeListFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeListFragment.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeListFragment.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/toporetstinkoff24/JokeListFragment.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,39 +0,0 @@
+-package com.example.toporetstinkoff24
+-
+-import android.os.Bundle
+-import android.view.LayoutInflater
+-import android.view.View
+-import android.view.ViewGroup
+-import androidx.fragment.app.Fragment
+-import androidx.recyclerview.widget.LinearLayoutManager
+-import androidx.recyclerview.widget.RecyclerView
+-
+-class JokeListFragment : Fragment() {
+-
+-
+-    private lateinit var recyclerView: RecyclerView
+-    private lateinit var adapter: JokeAdapter
+-
+-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+-        return inflater.inflate(R.layout.fragment_joke_list, container, false)
+-    }
+-
+-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+-        super.onViewCreated(view, savedInstanceState)
+-
+-        recyclerView = view.findViewById(R.id.recyclerView)
+-        adapter = JokeAdapter(JokeRepository.getJokes()) { joke ->
+-            openJokeDetailFragment(joke)
+-        }
+-
+-        recyclerView.layoutManager = LinearLayoutManager(context)
+-    }
+-
+-    private fun openJokeDetailFragment(joke: Joke) {
+-        val fragment = JokeDetailFragment.newInstance(joke)
+-        requireActivity().supportFragmentManager.beginTransaction()
+-            .replace(R.id.fragment_container, fragment)
+-            .addToBackStack(null)
+-            .commit()
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/JokeRepository.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/JokeRepository.kt b/app/src/main/java/com/example/toporetstinkoff24/JokeRepository.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/toporetstinkoff24/JokeRepository.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,42 +0,0 @@
+-package com.example.toporetstinkoff24
+-
+-object JokeRepository {
+-    private var idCounter = 1
+-
+-    fun getJokes(): List<Joke> {
+-        return listOf(
+-            Joke(
+-                idCounter++,
+-                "Christmas",
+-                "What does Santa suffer from if he gets stuck in a chimney?",
+-                "Claustrophobia!"
+-            ),
+-            Joke(
+-                idCounter++,
+-                "Science",
+-                "Why can't you trust an atom?",
+-                "Because they make up everything!"
+-            ),
+-            Joke(
+-                idCounter++,
+-                "Math",
+-                "Why was the equal sign so humble?",
+-                "Because it knew it wasn't less than or greater than anyone else!"
+-            ),
+-            Joke(
+-                idCounter++,
+-                "Programming",
+-                "Why do programmers prefer dark mode?",
+-                "Because light attracts bugs!"
+-            ),
+-            Joke(idCounter++, "Animals", "What do you call a bear with no teeth?", "A gummy bear!"),
+-            Joke(
+-                idCounter++,
+-                "Food",
+-                "Why did the tomato turn red?",
+-                "Because it saw the salad dressing!"
+-            ),
+-            Joke(idCounter++, "Music", "What kind of music do mummies listen to?", "Wrap music!")
+-        )
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/toporetstinkoff24/StringExtensions.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/toporetstinkoff24/StringExtensions.kt b/app/src/main/java/com/example/toporetstinkoff24/StringExtensions.kt
+deleted file mode 100644
+--- a/app/src/main/java/com/example/toporetstinkoff24/StringExtensions.kt	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,9 +0,0 @@
+-package com.example.toporetstinkoff24
+-
+-fun String.truncate(maxLength: Int): String {
+-    return if (this.length > maxLength) {
+-        this.take(maxLength) + "..."
+-    } else {
+-        this
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_joke_list.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_joke_list.xml b/app/src/main/res/layout/fragment_joke_list.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/fragment_joke_list.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,10 +0,0 @@
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:orientation="vertical">
+-
+-    <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/recyclerView"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent" />
+-</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/simple_list_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/simple_list_item.xml b/app/src/main/res/layout/simple_list_item.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/simple_list_item.xml	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
++++ /dev/null	(revision d29528b6814332e9d3a563e81f6e79af50d3f901)
+@@ -1,12 +0,0 @@
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:layout_width="match_parent"
+-    android:layout_height="wrap_content"
+-    android:orientation="vertical"
+-    android:padding="16dp">
+-
+-    <TextView
+-        android:id="@+id/questionTextView"
+-        android:textSize="16sp"
+-        android:layout_height="16dp"
+-        android:layout_width="16dp" />
+-</LinearLayout>
+\ No newline at end of file

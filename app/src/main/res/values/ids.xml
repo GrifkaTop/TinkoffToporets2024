@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="questionText" type="id" />
+    <item name="saveButton" type="id" />
+    <item name="questionEditText" type="id" />
+    <item name="answerEditText" type="id" />
+    <item name="categoryEditText" type="id" />
+    <item name="toolbar" type="id" />
+</resources>
